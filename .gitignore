@@ -1,0 +1,5 @@
+/bin/
+/ledgerd
+*.test
+*.out
+.DS_Store
