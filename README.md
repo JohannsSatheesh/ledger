@@ -1,5 +1,7 @@
 # Ledger
 
+[![CI](https://github.com/JohannsSatheesh/ledger/actions/workflows/ci.yml/badge.svg)](https://github.com/JohannsSatheesh/ledger/actions/workflows/ci.yml)
+
 A small payments ledger service written in Go. Accounts hold balances in pence, and transfers between them are safe under concurrent requests. Duplicate payments are prevented using idempotency keys, so a client can retry a request without being charged twice.
 
 It's a learning project: I wanted to understand the problems a payments backend has to get right (money must never be created or lost, and a retry must never move money twice) and to learn Go while building it.
@@ -135,3 +137,7 @@ The concurrency tests are the ones I learned the most from. I first reproduced t
 - The Go data race detector: https://go.dev/doc/articles/race_detector
 - Table-driven tests in Go: https://go.dev/wiki/TableDrivenTests
 - Designing robust and predictable APIs with idempotency (Stripe): https://stripe.com/blog/idempotency
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).
